@@ -18,11 +18,14 @@
                     Username already exists!
                 <% } else if ("registration_failed".equals(error)) { %>
                     Registration failed. Please try again.
+                <% } else if ("password_mismatch".equals(error)) { %>
+                    Passwords do not match!
                 <% } %>
             </div>
         <% } %>
         
-        <form action="RegisterServlet" method="post">
+        <!-- Updated form action to use the proper context path -->
+        <form action="${pageContext.request.contextPath}/RegisterServlet" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>

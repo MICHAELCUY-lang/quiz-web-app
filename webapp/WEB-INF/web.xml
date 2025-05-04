@@ -11,6 +11,16 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     
+    <!-- Define servlets explicitly -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.quiz.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
     <!-- Session timeout in minutes -->
     <session-config>
         <session-timeout>30</session-timeout>
